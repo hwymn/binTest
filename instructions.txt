@@ -1,0 +1,28 @@
+# How do you create a Linux command?
+
+1. Write script in VSCode or any other text editor
+2. Save file as Bash file (.sh)
+3. Formt. Use the "mv" command to change the name (remove the .sh). Can still use .sh, just more practical without it.
+4. *Optional: Make sure the Bash file is in the bin folder (make sure there is a bin folder)
+    Doesnt have to be "bin". Just following the Linux naming convention
+5. Use "chmod" to modify permissions followed by "+x" to specify executable permissions
+6. Add "PATH="$PATH:HOME/bin" to the .bashrc path file (.zshrc, etc.)
+    (All caps means main/absolute path in Linux) ~/bin=/home/bin
+    So we can use the command without the directory path. Essentially tells Linux to use a pre-existing path to access something
+
+
+Custom Scripts Process
+
+1. Create a Bash Script
+    a. Create/Write the script (DOES NOT NEED ".sh". It is only for organizational purposes. The first line "shabang" is where the file type is defined)
+    b. Format the script file
+        i. Rename the file with "mv" to remove the ".sh" from the name
+        ii. Change the file permissions. e.g. "chmod +x [name of file]". +x makes it execuatable.
+
+2. Create a binn folder to store the custom scripts.
+    a. Create a bin at the home-directory e.g. "~/home/username/bin".
+    b. Move the created script-file into the bin folder.
+    c. Configure the .bashrc of .zshrc (depends on your terminal configuration) to add the path we
+        want the OS to follow and find the script at
+
+3. Move the created script-file into the bin folder.

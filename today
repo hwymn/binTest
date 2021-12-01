@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#xargs echo "Today is " | tee itis.txt | date | cut -d " " --field=1 >> itis.txt
+
+#date | cut -d " " -f 1 | xargs echo "Today is " > itis.txt
+
+date | cut -d " " -f 1 | xargs echo "Today is "
+
+# "date" got the date
+# "cut" in the next section of the pipeline cut something from the date
+# "-d" is the delimiter that says where to cut when you put " ". It reads down the line until it sees that space
+# When you put "-f" and a number following, it tells the computer which space to stop and cut at
+# "xargs" allows "echo" to work
+# The text is quotation parks following "echo" is what it printed by echo
+# ">" tells the program to overwrite/create the file that is listed after
